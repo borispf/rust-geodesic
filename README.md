@@ -5,4 +5,3 @@ A rust wrapper around the C version of [GeographicLib](http://geographiclib.sour
  - [x] Geodesic
  - [ ] Line
  - [ ] Polygon
- - [ ] Tests!!!
