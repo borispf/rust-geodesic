@@ -13,6 +13,9 @@ impl Geodesic {
         }
         Geodesic { g: g }
     }
+    pub fn wgs84() -> Geodesic {
+        Geodesic::new(6378137.0, 1.0 / 298.257223563)
+    }
     pub fn direct(&self, lat1: f64, lon1: f64, azi1: f64, s12: f64) -> (f64, f64, f64) {
         let mut lat2 = std::f64::NAN;
         let mut lon2 = std::f64::NAN;
