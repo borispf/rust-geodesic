@@ -1,0 +1,6 @@
+[package]
+name = "geographiclib"
+version = "0.1.0"
+authors = ["Boris Pfahringer <bpnzltd@gmail.com>"]
+
+[dependencies]
