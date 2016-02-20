@@ -29,6 +29,8 @@ pub struct Geodesic {
 }
 
 impl Geodesic {
+    /// Constructs a `Geodesic` with equatorial radius `a` (metres)
+    /// and flattening `f`.
     pub fn new(a: f64, f: f64) -> Geodesic {
         let mut g = geodesic::Struct_geod_geodesic::default();
         unsafe {
@@ -36,6 +38,8 @@ impl Geodesic {
         }
         Geodesic { g: g }
     }
+
+    /// Constructs a `Geodesic` according to the WGS84 ellipsoid.
     pub fn wgs84() -> Geodesic {
         Geodesic::new(6378137.0, 1.0 / 298.257223563)
     }
