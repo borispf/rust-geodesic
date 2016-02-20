@@ -3,7 +3,7 @@
 
 A rust wrapper around the C version of [GeographicLib](http://geographiclib.sourceforge.net).
 
-[Documentation](http://borispf.github.io/docs/geodesic/geodesic/)
+[Documentation](http://borispf.github.io/docs/geodesic/geodesic/index.html)
 
 ## Todo
 
