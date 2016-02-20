@@ -8,4 +8,6 @@ os:
   - linux
   - osx
 
-after_success: curl https://raw.githubusercontent.com/borispf/docs/master/travis-doc-upload.sh | sh
+after_success:
+  - cargo doc
+  - curl https://raw.githubusercontent.com/borispf/docs/master/travis-doc-upload.sh | sh
