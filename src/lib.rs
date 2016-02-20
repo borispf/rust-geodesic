@@ -1,4 +1,25 @@
+//! A wrapper around the barebones C version of [GeographicLib][1] ([docs][2]).
 //!
+//! [1]: http://geographiclib.sourceforge.net
+//! [2]: http://geographiclib.sourceforge.net/html/C/index.html
+//!
+//! ```toml
+//! [dependencies]
+//! geodesic = "0.3"
+//! ```
+//!
+//! # Examples
+//!
+//! ```
+//! extern crate geodesic;
+//! use geodesic::Geodesic;
+//!
+//! fn main() {
+//!     let g = Geodesic::wgs84();
+//!     let (s12, _, _) = g.inverse(40.64, -73.78, 1.36, 103.99);
+//!     println!("Distance between JFK and Singapore Changi Airport: {:.3}m", s12);
+//! }
+//! ```
 
 #[allow(non_snake_case, dead_code, non_camel_case_types)]
 mod geodesic;
