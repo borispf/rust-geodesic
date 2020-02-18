@@ -1,5 +1,7 @@
-extern crate gcc;
+extern crate cc;
 
 fn main() {
-    gcc::compile_library("libgeodesic.a", &["src/geodesic.c"]);
+    cc::Build::new()
+        .file("src/geodesic.c")
+        .compile("libgeodesic.a");
 }
